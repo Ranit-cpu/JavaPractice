@@ -5,6 +5,7 @@ import java.util.List;
 import java.util.stream.Stream;
 
 public class Demo2 {
+    
     public static void main(String[] args){
         List<Integer> nums = Arrays.asList(9,2,8,4,7);
 
@@ -26,6 +27,9 @@ public class Demo2 {
         System.out.println("---------");
         
         //3rd Approach
-        nums.stream().map(n->n*2).forEach(System.out::println);
+        nums.stream()
+                .sorted()
+                .map(n->n*2)
+                .forEach(System.out::println);
     }
 }
